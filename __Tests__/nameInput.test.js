@@ -1,17 +1,24 @@
 import Player from './../src/nameInput.js';
 
+
+describe(Player, () => {
+    test("Player should exist", () =>{
+        expect(Player(nameInput, playerClass));
+    })
+})
+
 describe('nameInput', () => {
-    const name = new Player("Greg", "Warrior");
+    const player1 = new Player("Greg", "Warrior");
     test("input should exist", () => {
-        expect(name.nameInput).toBeDefined();
+        expect(player1.nameInput).toBeDefined();
     });
     test("input should initially have no value", () => {
-        expect(name.nameInput).toBe("");
+        expect(player1.nameInput).toBe("");
     });
     test('should check if nameInput is Greg & playerClass is Warrior', () => {
 
-        expect(name.nameInput).toBe("Greg");
-        expect(name.playerClass).toBe("Warrior");
+        expect(player1.nameInput).toBe("Greg");
+        expect(player1.playerClass).toBe("Warrior");
     });
 })
 
