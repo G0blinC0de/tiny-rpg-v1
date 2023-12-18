@@ -11,7 +11,14 @@ export default class Player {
     }
 };
 
+// UI Logic
 
+document.getElementById('submit').addEventListener('click', function (event) {
+    event.preventDefault();
+    const nameInput = document.getElementById('nameInput').value;
+    const playerClass = document.getElementsByName('classType').value;
+    let newPlayer = new Player(nameInput, playerClass);
+})
 
 // export default class Triangle {
 //     constructor(side1, side2, side3) {
