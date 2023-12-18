@@ -1,14 +1,25 @@
 import Player from '../src/playerInput.js';
+// import attributes from '../src/playerInput.js';
 
 
 describe('Player', () => {
-    test("Player should exist", () => {
+    test("Player should instantiate Player Object", () => {
         const player1 = new Player("Greg", "Warrior");
         expect(player1.nameInput).toBe("Greg");
         expect(player1.playerClass).toBe("Warrior");
     })
 })
 
+
+describe('classSelector', () => {
+    test("Should set player attribute according to class", () => {
+        const player1 = new Player("Greg", "Warrior");
+        player1.classSelector();
+        // expect(playerClass.wizard).toEqual(3, 0, 0);
+        expect(player1.attributes).toEqual([0, 3, 0]);
+        // expect(playerClass.rogue).toEqual(0, 0, 3);
+    })
+})
 
 
 // ------------- References & Examples ----------------

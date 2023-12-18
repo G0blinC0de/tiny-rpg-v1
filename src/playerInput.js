@@ -2,8 +2,16 @@ export default class Player {
     constructor(nameInput, playerClass) {
         this.nameInput = nameInput;
         this.playerClass = playerClass;
+        this.attributes = [];
     }
-}
+    classSelector() {
+        if (this.playerClass === "Warrior") {
+            this.attributes = [0, 3, 0]
+        }
+    }
+};
+
+
 
 // export default class Triangle {
 //     constructor(side1, side2, side3) {
