@@ -1,4 +1,4 @@
-import Player from '../src/playerInput.js';
+import { Player } from '../src/playerInput.js';
 // import attributes from '../src/playerInput.js';
 
 
@@ -8,18 +8,22 @@ describe('Player', () => {
         expect(player1.nameInput).toBe("Greg");
         expect(player1.playerClass).toBe("Warrior");
     })
-})
+});
 
 
 describe('classSelector', () => {
     test("Should set player attribute according to class", () => {
         const player1 = new Player("Greg", "Warrior");
+        const player2 = new Player("Steve", "Wizard");
+        const player3 = new Player("Anna", "Rogue");
         player1.classSelector();
-        // expect(playerClass.wizard).toEqual(3, 0, 0);
-        expect(player1.attributes).toEqual([0, 3, 0]);
-        // expect(playerClass.rogue).toEqual(0, 0, 3);
+        player2.classSelector();
+        player3.classSelector();
+        expect(player1.attributes).toEqual([3, 0, 0]);
+        expect(player2.attributes).toEqual([0, 3, 0]);
+        expect(player3.attributes).toEqual([0, 0, 3]);
     })
-})
+});
 
 
 

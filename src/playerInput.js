@@ -1,24 +1,22 @@
-export default class Player {
+export class Player {
     constructor(nameInput, playerClass) {
         this.nameInput = nameInput;
         this.playerClass = playerClass;
-        this.attributes = [];
+        this.attributes = [0, 0, 0];
     }
+
+    // attributes = [STR, INT, DEX]
     classSelector() {
         if (this.playerClass === "Warrior") {
-            this.attributes = [0, 3, 0]
+            this.attributes = [3, 0, 0];
+        } else if (this.playerClass === "Wizard") {
+            this.attributes = [0, 3, 0];
+        } else if (this.playerClass === "Rogue") {
+            this.attributes = [0, 0, 3];
         }
     }
-};
+}
 
-// UI Logic
-
-document.getElementById('submit').addEventListener('click', function (event) {
-    event.preventDefault();
-    const nameInput = document.getElementById('nameInput').value;
-    const playerClass = document.getElementsByName('classType').value;
-    let newPlayer = new Player(nameInput, playerClass);
-})
 
 // export default class Triangle {
 //     constructor(side1, side2, side3) {
@@ -38,4 +36,4 @@ document.getElementById('submit').addEventListener('click', function (event) {
 //             return "isosceles triangle";
 //         }
 //     }
-// } 
+// }
