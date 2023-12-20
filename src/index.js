@@ -11,11 +11,11 @@ document.getElementById('submit').addEventListener('click', function (event) {
     event.preventDefault();
     const nameInput = document.getElementById('nameInput').value;
     const playerClass = document.getElementById('classSelect').value;
-    const displayText = document.getElementById('displayText');
     let newPlayer = new Player(nameInput, playerClass);
+    const displayText = document.getElementById('displayText');
+    const playerInfo = `Name: ${newPlayer.nameInput}, Class: ${newPlayer.playerClass}, STR ${newPlayer.attributes[0]}, INT ${newPlayer.attributes[1]}, DEX ${newPlayer.attributes[2]}`;
 
-    console.log(newPlayer);
 
-    displayText.append(newPlayer);
+    displayText.append(playerInfo);
 
 });

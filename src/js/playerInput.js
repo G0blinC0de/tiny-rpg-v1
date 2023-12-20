@@ -3,8 +3,8 @@ export class Player {
         this.nameInput = nameInput;
         this.playerClass = playerClass;
         this.attributes = [0, 0, 0];
+        this.classSelector();
     }
-
     // attributes = [STR, INT, DEX]
     classSelector() {
         if (this.playerClass === "Warrior") {
