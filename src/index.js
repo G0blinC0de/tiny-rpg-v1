@@ -1,8 +1,8 @@
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
-import './playerInput.js';
-import { Player } from './playerInput.js';
+import './js/playerInput.js';
+import { Player } from './js/playerInput.js';
 
 
 // UI Logic

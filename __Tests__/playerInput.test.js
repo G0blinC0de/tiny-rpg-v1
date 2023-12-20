@@ -1,4 +1,4 @@
-import { Player } from '../src/playerInput.js';
+import { Player } from '../src/js/playerInput.js';
 // import attributes from '../src/playerInput.js';
 
 
@@ -12,15 +12,19 @@ describe('Player', () => {
 
 
 describe('classSelector', () => {
-    test("Should set player attribute according to class", () => {
+    test("It should set player attributes according to Warrior", () => {
         const player1 = new Player("Greg", "Warrior");
-        const player2 = new Player("Steve", "Wizard");
-        const player3 = new Player("Anna", "Rogue");
         player1.classSelector();
-        player2.classSelector();
-        player3.classSelector();
         expect(player1.attributes).toEqual([3, 0, 0]);
+    })
+    test("It should set player attributes according to Wizard", () => {
+        const player2 = new Player("Steve", "Wizard");
+        player2.classSelector();
         expect(player2.attributes).toEqual([0, 3, 0]);
+    })
+    test("It should set player attributes according to Rogue", () => {
+        const player3 = new Player("Anna", "Rogue");
+        player3.classSelector();
         expect(player3.attributes).toEqual([0, 0, 3]);
     })
 });
