@@ -26,3 +26,5 @@
 * 
 
 ## License
+
+* [GNU v3](LICENSE) (c) _12/08/23_ _G0blinC0de_

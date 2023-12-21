@@ -3,7 +3,9 @@ export class Player {
         this.nameInput = nameInput;
         this.playerClass = playerClass;
         this.attributes = [0, 0, 0];
-        this.classSelector();
+        strAtt = this.attributes[0];
+        intAtt = this.attributes[1];
+        dexAtt = this.attributes[2];
     }
     // attributes = [STR, INT, DEX]
     classSelector() {

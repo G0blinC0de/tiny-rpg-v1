@@ -20,7 +20,7 @@ module.exports = {
         new ESLintPlugin(),
         new CleanWebpackPlugin(), // new line
         new HtmlWebpackPlugin({
-            title: 'Shape Tracker',
+            title: 'Tiny RPG v1',
             template: './src/index.html',
             inject: 'body'
         })
