@@ -3,7 +3,16 @@ import { Player } from "../src/js/playerInput";
 import { rollDice20 } from '../src/js/questRoller.js';
 
 describe('questBuilder', () => {
-    const player1 = new Player("Steve", "Wizard", [0, 3, 0]);
-    const classStats = player1.attributes + rollDice20;
-    expect (classStats).toBeGreaterThanOrEqual(1);
+    beforeEach
+    test("It should add the strength attribute value to the diceRoll20 result", () => {
+        const player1 = new Player("Steve", "Warrior", [3, 0, 0]);
+        
+        console.log(player1.attributes[0]);
+        const classStats = player1.attributes[0] + rollDice20();
+        expect(classStats).toBeGreaterThanOrEqual(1);
+        expect(classStats).toBeLessThanOrEqual(23);
+        console.log(classStats);
+    })
+
+    // test('questInt')
 })

@@ -15,7 +15,7 @@ document.getElementById('submit').addEventListener('click', function (event) {
     const displayText = document.getElementById('displayText');
     const playerInfo = `Name: ${newPlayer.nameInput}, Class: ${newPlayer.playerClass}, STR ${newPlayer.attributes[0]}, INT ${newPlayer.attributes[1]}, DEX ${newPlayer.attributes[2]}`;
 
-
+    // need to change this so it updates "playerInfo" when the user changes class or name.
     displayText.append(playerInfo);
 
 });

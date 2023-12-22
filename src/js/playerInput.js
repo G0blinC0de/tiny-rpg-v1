@@ -3,18 +3,16 @@ export class Player {
         this.nameInput = nameInput;
         this.playerClass = playerClass;
         this.attributes = [0, 0, 0];
-        strAtt = this.attributes[0];
-        intAtt = this.attributes[1];
-        dexAtt = this.attributes[2];
+        this.classSelector(this.playerClass, this.attributes);
     }
     // attributes = [STR, INT, DEX]
-    classSelector() {
-        if (this.playerClass === "Warrior") {
-            this.attributes = [3, 0, 0];
-        } else if (this.playerClass === "Wizard") {
-            this.attributes = [0, 3, 0];
-        } else if (this.playerClass === "Rogue") {
-            this.attributes = [0, 0, 3];
+    classSelector(pClass, pAttribute) {
+        if (pClass === "Warrior") {
+            pAttribute = [3, 0, 0];
+        } else if (pClass === "Wizard") {
+            pAttribute = [0, 3, 0];
+        } else if (pClass === "Rogue") {
+            pAttribute = [0, 0, 3];
         }
     }
 }
